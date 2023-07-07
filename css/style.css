@@ -144,6 +144,9 @@ body {
   display: flex;
   align-items: baseline;
 }
+.social_footer {
+  margin-right: 80px;
+}
 .social_footer_text {
   color: white;
   margin-bottom: 16px;
@@ -194,6 +197,72 @@ body {
   background-color: var(--navyblue);
   padding: 100px 0;
 }
+.footer_input {
+  display: flex;
+}
+.label_email_footer {
+  margin-right: 24px;
+}
+.email_footer {
+  display: block;
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  background: var(--navyblue);
+  border-radius: 4px;
+  border: 1px solid #fff;
+  color: white;
+}
+.email_footer::placeholder {
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.48px;
+}
+.footer_text_label {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  color: white;
+}
+.button_bottom_email {
+  width: 165px;
+  height: 40px;
+  border: none;
+  background-color: var(--iris);
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  align-self: end;
+  position: relative;
+  text-align: left;
+  cursor: pointer;
+  display: block;
+}
+.button_bottom_email::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/telegram.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 8px;
+  right: 24px;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button_bottom_email:hover,
+.button_bottom_email:focus {
+  background: var(--ocean);
+}
 /*END FOOTER FOR TWO PAGES */
 /*   
 MAIN PAGE START
@@ -217,12 +286,11 @@ MAIN PAGE START
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: 48px;
 }
-.btn_ord:hover {
-  background: var(--ocean);
-}
+.btn_ord:hover,
 .btn_ord:focus {
   background: var(--ocean);
 }
+
 .effective_section {
   font-family: "Roboto";
   margin: 0 auto;
@@ -613,7 +681,130 @@ MAIN PAGE START
   border-radius: 4px;
   opacity: 1;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px;
 }
+.form_general {
+  display: flex;
+  flex-direction: column;
+}
+.text_modal {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  color: var(--navyblue);
+  text-align: center;
+  margin-bottom: 16px;
+}
+.text_input {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.48px;
+  color: #8e8f99;
+  margin-bottom: 4px;
+}
+.input_general {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid var(--navyblue);
+  padding: 0 38px;
+  color: black;
+  font-size: 18px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon_input {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.container_input {
+  position: relative;
+  display: block;
+}
+.text_area {
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input_general:focus,
+.text_area:focus {
+  border: 1px solid #4d5ae5;
+  outline: none;
+}
+.input_general:focus + .icon_input {
+  fill: var(--iris);
+}
+.visually_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.text_area {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.48px;
+}
+.text_area::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.48px;
+  color: rgba(46, 47, 66, 0.4);
+}
+.label_name {
+  margin-bottom: 8px;
+}
+
+.label_user_policy {
+  display: flex;
+  color: #8e8f99;
+  font-size: 12px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.48px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+.label_user_policy::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 2550ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 8px;
+}
+.policy_checkbox:checked + .label_user_policy::before {
+  background: url("../images/icon_checked.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  outline: none;
+}
+.policy_checkbox:focus + .label_user_policy::before {
+  outline: 2px solid rgba(0, 0, 255, 0.7);
+}
+
 .backdrop.is-hidden .modal {
   transform: scale(0.2);
   opacity: 0;
