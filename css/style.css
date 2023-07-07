@@ -204,11 +204,16 @@ body {
   margin-right: 24px;
 }
 .email_footer {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   display: block;
   width: 264px;
   height: 40px;
   padding: 8px 16px;
-  background: var(--navyblue);
+  background-color: transparent;
   border-radius: 4px;
   border: 1px solid #fff;
   color: white;
@@ -225,14 +230,17 @@ body {
   margin-bottom: 16px;
   font-size: 16px;
   font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.32px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: white;
 }
+.footer_form {
+  display: flex;
+  gap: 24px;
+}
 .button_bottom_email {
-  width: 165px;
+  min-width: 165px;
   height: 40px;
-  border: none;
   background-color: var(--iris);
   padding: 8px 24px;
   border-radius: 4px;
@@ -241,23 +249,17 @@ body {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.64px;
-  align-self: end;
-  position: relative;
-  text-align: left;
   cursor: pointer;
   display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  border: none;
 }
-.button_bottom_email::after {
-  content: "";
-  width: 24px;
-  height: 24px;
-  background-image: url("../images/telegram.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 8px;
-  right: 24px;
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+.icon_email {
+  margin-left: 16px;
 }
 .button_bottom_email:hover,
 .button_bottom_email:focus {
