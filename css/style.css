@@ -786,6 +786,9 @@ MAIN PAGE START
 .modal_wrapper_policy {
   margin-bottom: 24px;
 }
+.modal_wrapper_comment {
+  margin-bottom: 16px;
+}
 .label_user_policy {
   display: flex;
   color: #8e8f99;
