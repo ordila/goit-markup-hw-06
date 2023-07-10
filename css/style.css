@@ -762,6 +762,7 @@ MAIN PAGE START
   margin-bottom: 4px;
 }
 .input_icon {
+  position: relative;
 }
 .text_area {
   resize: none;
