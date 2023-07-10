@@ -711,6 +711,7 @@ MAIN PAGE START
   border-radius: 4px;
   border: 1px solid var(--navyblue);
   padding-left: 38px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   color: black;
   font-size: 18px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -724,19 +725,7 @@ MAIN PAGE START
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.container_input {
-  position: relative;
-  display: block;
-}
-.text_area {
-  border-radius: 4px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.input_general:focus,
-.text_area:focus {
-  border-color: #4d5ae5;
-  outline: none;
-}
+
 .input_general:focus + .icon_input {
   fill: var(--iris);
 }
@@ -773,6 +762,15 @@ MAIN PAGE START
   font-weight: 400;
   line-height: 14px;
   letter-spacing: 0.48px;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  outline: transparent;
+}
+.input_general:focus,
+.text_area:focus {
+  border-color: #4d5ae5;
+  outline: none;
 }
 .text_area::placeholder {
   font-size: 12px;
@@ -785,6 +783,9 @@ MAIN PAGE START
 .modal_wrapper {
   margin-bottom: 8px;
 }
+.modal_wrapper_policy {
+  margin-bottom: 24px;
+}
 .label_user_policy {
   display: flex;
   color: #8e8f99;
@@ -792,7 +793,7 @@ MAIN PAGE START
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 1.17;
   letter-spacing: 0.48px;
   margin-top: 8px;
   margin-bottom: 24px;
