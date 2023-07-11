@@ -796,6 +796,8 @@ MAIN PAGE START
 }
 .icon_policy_span {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 16px;
   width: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -803,12 +805,12 @@ MAIN PAGE START
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  align-items: center;
-  justify-content: center;
   fill: transparent;
   margin-right: 8px;
 }
-
+.button_modal_send {
+  margin-top: 0;
+}
 .modal_wrapper {
   margin-bottom: 8px;
 }
@@ -828,7 +830,7 @@ MAIN PAGE START
   line-height: 1.17;
   letter-spacing: 0.48px;
   margin-top: 8px;
-  margin-bottom: 24px;
+
   align-items: center;
 }
 
