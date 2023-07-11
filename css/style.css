@@ -795,7 +795,7 @@ MAIN PAGE START
   color: rgba(46, 47, 66, 0.4);
 }
 .icon_policy_span {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   height: 16px;
