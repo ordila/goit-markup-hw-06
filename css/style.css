@@ -36,6 +36,19 @@ body {
 .list {
   list-style: none;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /* HEADER FOR TWO PAGEs*/
 .header_section {
@@ -793,6 +806,7 @@ MAIN PAGE START
   align-items: center;
   justify-content: center;
   fill: transparent;
+  margin-right: 8px;
 }
 
 .modal_wrapper {
@@ -815,12 +829,13 @@ MAIN PAGE START
   letter-spacing: 0.48px;
   margin-top: 8px;
   margin-bottom: 24px;
+  align-items: center;
 }
 
-.policy_checkbox:checked .icon_policy_span {
+.policy_checkbox:checked + .icon_policy_span {
+  fill: #f4f4fd;
   background-color: #404bbf;
   border: none;
-  fill: #f4f4fd;
 }
 
 .backdrop.is-hidden .modal {
