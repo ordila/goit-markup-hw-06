@@ -795,6 +795,7 @@ MAIN PAGE START
   color: rgba(46, 47, 66, 0.4);
 }
 .icon_policy_span {
+  display: inline-flex;
   height: 16px;
   width: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -802,7 +803,6 @@ MAIN PAGE START
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
@@ -832,12 +832,14 @@ MAIN PAGE START
   align-items: center;
 }
 
-.policy_checkbox:checked + .icon_policy_span {
+.policy_checkbox:checked + .label_user_policy .icon_policy_span {
   fill: #f4f4fd;
   background-color: #404bbf;
   border: none;
 }
-
+.link_policy {
+  color: #4d5ae5;
+}
 .backdrop.is-hidden .modal {
   transform: scale(0.2);
   opacity: 0;
