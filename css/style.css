@@ -729,7 +729,7 @@ MAIN PAGE START
 .input_general:focus + .icon_input {
   fill: var(--iris);
 }
-.visually-hidden {
+/*.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -741,7 +741,7 @@ MAIN PAGE START
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
+  */
 .label_name {
   font-size: 12px;
   line-height: 1.17;
@@ -781,7 +781,19 @@ MAIN PAGE START
   letter-spacing: 0.48px;
   color: rgba(46, 47, 66, 0.4);
 }
-
+.icon_policy_span {
+  height: 16px;
+  width: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
 .modal_wrapper {
   margin-bottom: 8px;
 }
@@ -803,25 +815,11 @@ MAIN PAGE START
   margin-top: 8px;
   margin-bottom: 24px;
 }
-.label_user_policy::before {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 2550ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-right: 8px;
-}
-.policy_checkbox:checked + .label_user_policy::before {
-  background: url("../images/icon_checked.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  outline: none;
-}
-.policy_checkbox:focus + .label_user_policy::before {
-  outline: 2px solid rgba(0, 0, 255, 0.7);
+
+.policy_checkbox:checked .icon_policy_span {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
 }
 
 .backdrop.is-hidden .modal {
